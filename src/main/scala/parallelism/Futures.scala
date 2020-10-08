@@ -9,7 +9,7 @@ import scala.concurrent.{Future, Await}
 import scala.concurrent.duration._
 import scala.util.{Success, Failure}
 
-object Features extends App {
+object Futures extends App {
 	def checkValue[A](f: Future[A]): String =	f.value match {
 		case None => "Not yet completed"
 		case Some(Success(v)) => s"Result is $v"
